@@ -11,12 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: [3.9, 3.10, 3.11]
+        python-version: [3.9, 3.10, 3.11]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
-        with:
-          python-version: version
       - uses: pre-commit/action@v3.0.0
 
   small-tests:
