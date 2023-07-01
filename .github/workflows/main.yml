@@ -34,8 +34,8 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: "small_tests_results_${{vars.python-version}}"
-          path: "small_tests_results_${{vars.python-version}}.xml"
+          name: "small_tests_results_${{strategy.python-version}}"
+          path: "small_tests_results_${{strategy.python-version}}.xml"
         if: always()
 
   large-tests:
@@ -56,8 +56,8 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: "large_tests_results_${{vars.python-version}}"
-          path: "large_tests_results_${{vars.python-version}}.xml"
+          name: "large_tests_results_${{strategy.python-version}}"
+          path: "large_tests_results_${{strategy.python-version}}.xml"
         if: always()
 
   report_workflow:
