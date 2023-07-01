@@ -30,7 +30,7 @@ jobs:
           poetry install
 
       - name: run small-tests
-        run: poetry run python -m pytest -v --junitxml=small_tests_results.xml tests/small
+        run: poetry run python -m pytest -v --junitxml=small_tests_results_${{matrix.python-version}}.xml tests/small
 
       - uses: actions/upload-artifact@v3
         with:
@@ -52,7 +52,7 @@ jobs:
           poetry install
 
       - name: run large-tests
-        run: poetry run python -m pytest -v --junitxml=large_tests_results.xml tests/large
+        run: poetry run python -m pytest -v --junitxml=large_tests_results_${{matrix.python-version}}.xml tests/large
 
       - uses: actions/upload-artifact@v3
         with:
