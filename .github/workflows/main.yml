@@ -35,7 +35,7 @@ jobs:
         with:
           name: small_tests_results
           path: small_tests_results.xml
-          if: always()
+        if: always()
           
   large-tests:
     runs-on: ubuntu-latest
