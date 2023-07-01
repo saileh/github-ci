@@ -18,13 +18,13 @@ This repository serves as a demonstration for showcasing the usage of GitHub Act
 To get started, clone the github-ci-presentation repository by running the following command in your terminal:
 
 ``` bash
-git clone git@github.com:uoboda-splunk/github-ci-presentation.git
+git clone git@github.com:kkania-splunk/github-ci.git
 ```
 
 Next, navigate into the cloned repository directory and install the project dependencies using Poetry:
 
 ``` bash
-cd github-ci-presentation
+cd github-ci
 poetry install
 ```
 
