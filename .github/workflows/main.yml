@@ -39,6 +39,7 @@ jobs:
         with:
           name: "small_tests_results_${{matrix.python-version}}"
           path: "small_tests_results_${{matrix.python-version}}.xml"
+        if: always()
 
   large-tests:
     strategy:
@@ -63,6 +64,7 @@ jobs:
         with:
           name: "large_tests_results_${{matrix.python-version}}"
           path: "large_tests_results_${{matrix.python-version}}.xml"
+        if: always()
 
   report_workflow:
     if: always()
