@@ -37,7 +37,7 @@ jobs:
           name: "small_tests_results_${{vars.python-version}}"
           path: "small_tests_results_${{vars.python-version}}.xml"
         if: always()
-          
+
   large-tests:
     strategy:
       matrix:
