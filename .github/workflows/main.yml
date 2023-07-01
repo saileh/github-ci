@@ -19,6 +19,7 @@ jobs:
   small-tests:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python-version: [3.9, 3.10, 3.11]
     steps:
@@ -36,10 +37,10 @@ jobs:
         with:
           name: "small_tests_results_${{matrix.python-version}}"
           path: "small_tests_results_${{matrix.python-version}}.xml"
-        if: always()
 
   large-tests:
     strategy:
+      fail-fast: false
       matrix:
         python-version: [3.10, 3.11]
     runs-on: ubuntu-latest
@@ -58,7 +59,6 @@ jobs:
         with:
           name: "large_tests_results_${{matrix.python-version}}"
           path: "large_tests_results_${{matrix.python-version}}.xml"
-        if: always()
 
   report_workflow:
     if: always()
